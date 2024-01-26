@@ -1,1 +1,0 @@
-alert("Welcome to Harry Web Development Course")
