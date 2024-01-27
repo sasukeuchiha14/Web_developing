@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ID & Classes</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Video, Audio & Media</title>
 </head>
 <body>
-    <div id="firstdiv" class="red bg-yellow">First</div>
-    <!--Multiple classes can be assigned by giving space in between them-->
-    <div id="seconddiv" class="bg-yellow">Second</div>
-    <span class="red"></span>
+    <video src="video.mp4" height="400" controls poster="download.jpg"></video>
+    
+    <audio src="sachin.mp3" controls loop></audio>
+
+    <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="2" fill="cyan"/>
+    </svg>
+    
+    <img src="img.svg" alt="">
+
+    <iframe src="https://www.wikipedia.org/" frameborder="2" height="500" width="1000"></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XZwBNDGuWGU?si=YgsveHBKdGAq0Zvr&amp;start=698" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </body>
 </html>
