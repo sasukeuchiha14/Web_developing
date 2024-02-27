@@ -1,16 +1,58 @@
-#external{
+/* /Class selecter */
+.red{
+    background-color: red;
+}
+
+/* ID Selector */
+#green{
+    background-color: green;
+}
+
+/* Child Selector */
+div > p{
+    color: blue;
+}
+
+/* Descendant Selector */
+div p{
+    background-color: yellow;
+}
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Pseudo Selector */
+a:visited{
+    color: purple;
+}
+a:link{
+    color: blue;
+}
+a:active{
+    background-color: purple;
+}
+a:hover{
     color: red;
-    font-size: 20px;
+}
+p:last-child{
+    background-color: cyan;
+}
+
+
+a{
     text-decoration: none;
+    box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    color: black;
+    font-size: 20px;
     font-weight: bold;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
     text-align: center;
     display: block;
-    margin: 10px auto;
-    padding: 10px;
-    border: 2px solid black;
-    border-radius: 5px;
-    background-color: rgb(210, 210, 210);
-    transition: 0.5s;
+    width: 200px;
 }
