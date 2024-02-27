@@ -1,3 +1,16 @@
-td{
+#external{
+    color: red;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
     border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(210, 210, 210);
+    transition: 0.5s;
 }
