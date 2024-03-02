@@ -23,5 +23,9 @@
     width: 100px;
 }
 
+body {
+    background-color: gray;
+  }
+
 /* Margin Collapse */
 /*  */
