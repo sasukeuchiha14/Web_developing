@@ -20,14 +20,32 @@
         #test_line{
             text-decoration: underline;
         }
+        h2{
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline overline;
+            text-decoration-color: aqua;
+            text-decoration-style: double dotted wavy;
+            text-decoration-thickness: 7px;
+            text-indent: 50px;
+        }
+        .lorem{
+            border: 2px solid red;
+            width: 700px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+
+        }
     </style>
 </head>
 <body>
     <div>
         <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
         <h1>Fonts</h1>
+        <h2>about Fonts</h2>
         <p id="test_line">This is a video on Fonts</p>
-        <p id="Lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, eos illo earum sunt impedit odit a laboriosam iste totam perspiciatis dignissimos dolores quod numquam quibusdam autem, unde maiores amet quo suscipit animi recusandae modi rem, error exercitationem? Corrupti aperiam perspiciatis quam rem, eum eaque pariatur.</p>
+        <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, eos illo earum sunt impedit odit a laboriosam iste totam perspiciatis dignissimos dolores quod numquam quibusdam autem, unde maiores amet quo suscipit animi recusandae modi rem, error exercitationem? Corrupti aperiam perspiciatis quam rem, eum eaque pariatur.</p>
     </div>
 </body>
 </html>
