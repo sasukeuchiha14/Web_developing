@@ -3,49 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFonts</title>
+    <title>Colors</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-        h1{
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
         p{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-style: italic;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 1.5;
-            letter-spacing: 1px;
+            background-color: aqua;
         }
-        #test_line{
-            text-decoration: underline;
+        /*https://codepen.io/web-dot-dev/pen/ZELGraM*/
+        #one{
+            color: red;
         }
-        h2{
-            text-align: center;
-            text-transform: uppercase;
-            text-decoration: underline overline;
-            text-decoration-color: aqua;
-            text-decoration-style: double dotted wavy;
-            text-decoration-thickness: 7px;
-            text-indent: 50px;
+        #two{
+            color: #ff0000;
         }
-        .lorem{
-            border: 2px solid red;
-            width: 700px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            word-break: break-all;
-
+        #three{
+            color: rgb(255, 0, 0);
+        }
+        #four{
+            color: rgba(255, 0, 0, 0.9);
+        }
+        #five{
+            color: hsl(0, 100%, 50%);
+        }
+        #six{
+            color: hsla(0, 100%, 50%, 0.9);
         }
     </style>
 </head>
 <body>
-    <div>
-        <!-- https://codepen.io/web-dot-dev/pen/yLojraG -->
-        <h1>Fonts</h1>
-        <h2>about Fonts</h2>
-        <p id="test_line">This is a video on Fonts</p>
-        <p class="lorem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, eos illo earum sunt impedit odit a laboriosam iste totam perspiciatis dignissimos dolores quod numquam quibusdam autem, unde maiores amet quo suscipit animi recusandae modi rem, error exercitationem? Corrupti aperiam perspiciatis quam rem, eum eaque pariatur.</p>
-    </div>
+    <h1>Lets learn about colors</h1>
+    <p>
+        Color can be represented in:
+        <ol>
+            <li id="one">Color Keywords</li>
+            <li id="two">Hex color code</li>
+            <li id="three">RGB</li>
+            <li id="four">RGBA</li>
+            <li id="five">HSL</li>
+            <li id="six">HSLA</li>
+        </ol>
+    </p>
 </body>
 </html>
