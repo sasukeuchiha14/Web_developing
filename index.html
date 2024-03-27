@@ -3,44 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colors</title>
+    <title>Exercise 2</title>
     <style>
-        p{
-            background-color: aqua;
-        }
-        /*https://codepen.io/web-dot-dev/pen/ZELGraM*/
-        #one{
+        div>p:first-child{
+            background-color: yellow;
             color: red;
         }
-        #two{
-            color: #ff0000;
-        }
-        #three{
-            color: rgb(255, 0, 0);
-        }
-        #four{
-            color: rgba(255, 0, 0, 0.9);
-        }
-        #five{
-            color: hsl(0, 100%, 50%);
-        }
-        #six{
-            color: hsla(0, 100%, 50%, 0.9);
+
+        div>p{
+            background-color: blue;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Lets learn about colors</h1>
-    <p>
-        Color can be represented in:
-        <ol>
-            <li id="one">Color Keywords</li>
-            <li id="two">Hex color code</li>
-            <li id="three">RGB</li>
-            <li id="four">RGBA</li>
-            <li id="five">HSL</li>
-            <li id="six">HSLA</li>
-        </ol>
-    </p>
+    <h1>Write html and css code to style a paragraph inside a div which contains 5 other paragraphs. The first paragraph must have background color yellow and text color red. And the second para should have blue color as background and white as text color. The HMTL is written below for your reference.</h1>
+    <div>
+        This is para in a div.
+        <p>Para1</p>
+        <p>Para2</p>
+        <p>Para3</p>
+    </div>
+    <div>
+        <p>Para4</p>
+        <p>Para5</p>
+    </div>
 </body>
 </html>
