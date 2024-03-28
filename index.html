@@ -3,30 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercise 2</title>
+    <title>CSS Specificity and Cascade</title>
     <style>
-        div>p:first-child{
-            background-color: yellow;
+        .yellow{
+            color: yellow !important; /*Without !important : Red color will come as it is defined at last*/
+        }
+        .purple{
+            color: purple;
+        }
+        h1{
+            color: aqua;
+        }
+        .cred{
             color: red;
         }
 
-        div>p{
-            background-color: blue;
-            color: white;
+        /*Attribute Selector*/
+        [data-x="a"]{
+            color: maroon;
         }
     </style>
 </head>
 <body>
-    <h1>Write html and css code to style a paragraph inside a div which contains 5 other paragraphs. The first paragraph must have background color yellow and text color red. And the second para should have blue color as background and white as text color. The HMTL is written below for your reference.</h1>
+    <h1 style="color:white" class="yellow cred purple" data-x="a">Specificity</h1>
+    <a href="https://www.codewithharry.com/tutorial/css-specificity/">CSS-Specificity</a>
     <div>
-        This is para in a div.
-        <p>Para1</p>
-        <p>Para2</p>
-        <p>Para3</p>
+        <p>Important &gt Inline Style &gt ID (Last defined color will come) &gt Class/Attribute (Last defined color will come) &gt Element &gt Universal</p>
     </div>
-    <div>
-        <p>Para4</p>
-        <p>Para5</p>
-    </div>
+    <ul>
+        <li>Universal Selector: 0</li>
+        <li>Element selectors and pseudo-elements: 1</li>
+        <li>Class selectors, attribute selectors, and pseudo-classes: 10</li>
+        <li>ID selectors: 100</li>
+        <li>Inline styles: 1000</li>
+        </ul>
+    <p>If we use 2 or more at a time, points will be added and color will be applied according to it.</p>
+    <br>
+    <p style="text-decoration: underline;">For example: 
+        The specificity of <br>
+        <h4>a. harryclass.rohan-class[href] :hover</h4>
+        Is selector is 1 + 10 + 10 + 10 + 10 = 41
+    </p>
 </body>
 </html>
