@@ -3,37 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Display Property</title>
+    <title>CSS Shadows and Outlines</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
         .box{
-            border: 2px solid blue;
-            display: inline;
-            padding: 30px;
-            margin: 10px; /*Margin on top and bottom does not work because of display: inline */
-            width: 150px; /*width does not work because of display: inline */
-            display: inline-block; /*This will work for margin and width */
-        }
-        .box1{
-            display: none; /*This will hide the box */
-            visibility: hidden; /*This will hide the box but it's space will be left empty*/
-            /*Check by removing one at a time.*/
+            border: 2px solid green; /*Border is Inside*/
+            border-radius: 20px;
+            padding: 34px;
+            box-shadow: 5px 5px 10px 0px #888888; /*h-offset v-offset blur spread color*/
+            text-shadow: 2px 2px 4px #e13f3f; /*h-offset v-offset blur color*/
+            outline: 2px solid black; /*Outline is Outside*/
         }
     </style>
 </head>
 <body>
-    <div class="box box1">
+    <div class="box">
         I am a Box
     </div>
-    <div class="box">Also a Nice Box</div>
-    <span>I am a Good</span>
-    <span>Line</span>
     <br>
-    Display Flex and Grid also Exists which will be covered later
-    <br>
-    &gt <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display">Display Resources</a> &lt
+    &gt <a href="https://www.codewithharry.com/tutorial/css-shadows/">Shadows and Outlines</a> &lt
 </body>
 </html>
