@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Shadows and Outlines</title>
+    <title>Style Listing using CSS</title>
     <style>
-        .box{
-            border: 2px solid green; /*Border is Inside*/
-            border-radius: 20px;
-            padding: 34px;
-            box-shadow: 5px 5px 10px 0px #888888; /*h-offset v-offset blur spread color*/
-            text-shadow: 2px 2px 4px #e13f3f; /*h-offset v-offset blur color*/
-            outline: 2px solid black; /*Outline is Outside*/
+        nav ul li{
+            list-style: devanagari inside;
+            list-style-type: "✅";
+            background-color: yellow;
+            border: 2px solid black;
+            border-radius: 5px;
+            /* list-style-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTBrNWg5ZTgxY2Y4aWZqcHEzb250ZTAybDR4YmtteGplanNuaDd2cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lTLV2erK8vf1MIz4Rk/giphy.gif'); */
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        I am a Box
-    </div>
-    <br>
-    &gt <a href="https://www.codewithharry.com/tutorial/css-shadows/">Shadows and Outlines</a> &lt
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+        </ul>
+    </nav>
 </body>
 </html>
