@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Listing using CSS</title>
+    <title>CSS Overflow Property</title>
     <style>
-        nav ul li{
-            list-style: devanagari inside;
-            list-style-type: "✅";
-            background-color: yellow;
+        .box{
+            width: 70vw;
+            height: 20vh;
             border: 2px solid black;
-            border-radius: 5px;
-            /* list-style-image: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTBrNWg5ZTgxY2Y4aWZqcHEzb250ZTAybDR4YmtteGplanNuaDd2cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lTLV2erK8vf1MIz4Rk/giphy.gif'); */
+            overflow: auto; /* This will add a scrollbar to the box if ONLY required*/
+            white-space: nowrap; /* This will prevent the text from wrapping */
+            text-overflow: ellipsis; /* This will add an ellipsis (...) to the text if it overflows */
+            overflow-x: hidden; /* This will hide the horizontal overflow */
+            overflow-y: scroll; /* This will add a scrollbar to the vertical overflow */
+            overflow: hidden scroll; /*x-overflow y-overflow*/
+            /*Auto is preferred over scroll as it will only add a scrollbar if required*/
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Services</li>
-        </ul>
-    </nav>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus doloribus natus reiciendis iste earum deserunt reprehenderit dolores quasi quo at praesentium distinctio ex esse mollitia veritatis, consequuntur in repellat dolore est rerum cum! Id incidunt eius amet tenetur deleniti, sed commodi autem veniam soluta? Rem!
+    </div>
 </body>
 </html>
