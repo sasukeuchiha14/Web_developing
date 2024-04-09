@@ -3,25 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Overflow Property</title>
+    <title>CSS Position Property</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
         .box{
-            width: 70vw;
-            height: 20vh;
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
             border: 2px solid black;
-            overflow: auto; /* This will add a scrollbar to the box if ONLY required*/
-            white-space: nowrap; /* This will prevent the text from wrapping */
-            text-overflow: ellipsis; /* This will add an ellipsis (...) to the text if it overflows */
-            overflow-x: hidden; /* This will hide the horizontal overflow */
-            overflow-y: scroll; /* This will add a scrollbar to the vertical overflow */
-            overflow: hidden scroll; /*x-overflow y-overflow*/
-            /*Auto is preferred over scroll as it will only add a scrollbar if required*/
+        }
+        .box1{
+            background-color: aqua;
+            position: absolute; /*Sets the position to Absolute which allows the box to be placed anywhere in the page*/
+            /*It's parent div or any upper div has no position set(any position except static is accepted).*/
+            /*TRANSFORM, FILTER, or PERSPECTIVE properties can also make an element appear as positioned */
+            /* will be covered in later on videos*/
+            /* transform: translate(0);
+            filter: invert(0);
+            perspective: 0em; */
+            top: 0px; /*It sets the 0px top position to the top of the page according to html*/
+        }
+        .box2{
+            background-color: rgb(255, 52, 52);
+            position: relative; /*Sets the position to Relative which allows some property to be applies as initially property is static*/
+            top: -100px;
+            left: 50px; 
+            z-index: -1; /*Sets the z-index to -1 which makes the box to go behind the other boxes*/
+        }
+        .box3{
+            background-color: blueviolet;
+            position: sticky; /*Sets the position to Sticky which allows the box to be sticky at the position when it reaches there on the page.*/
+            top: 10px;
+        }
+        .box4{
+            background-color: chartreuse;
+            position: fixed; /*Sets the position to Fixed which allows the box to be fixed at the position where it is placed on the page.*/
+            right: 1vw;
+            width: 15vw !important;
+            height: 20vw !important;
+        }
+        .parent{
+            padding: 43px;
+            margin: 34px;
+            height: 1000px;
+            border: 3px solid black;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus doloribus natus reiciendis iste earum deserunt reprehenderit dolores quasi quo at praesentium distinctio ex esse mollitia veritatis, consequuntur in repellat dolore est rerum cum! Id incidunt eius amet tenetur deleniti, sed commodi autem veniam soluta? Rem!
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
     </div>
 </body>
 </html>
