@@ -3,61 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Variables</title>
+    <title>CSS Media Queries</title>
     <style>
-    
-        /*Root is a global variable*/
-        :root{
-            --color: rgb(88, 255, 88);
-            --seccolor: rgb(161, 255, 161);
-            --defpadding: 23px;
-            --defopacity: 0.5;
+        body{
+            background-color: red;
         }
 
-        *{
-            margin: 0;
-            padding: 0;
+        /* @media not|only mediatype and (expressions) {
+            CSS-Code;
+        } */
+
+        @media only screen and (max-width: 455px) {
+            body{
+                background-color: blue;
+            }
+            .boxes{
+                flex-direction: column;
+            }
         }
 
-        .nav{
-            background-color: var(--color);
+        @media only screen and (orientation: landscape) {
+            body{
+                border: 5px solid green;
+            }
         }
 
-        ul{
+        .boxes{
             display: flex;
         }
 
-        ul li{
-            list-style: none;
-            padding: var(--defpadding);
-            border: 2px solid var(--seccolor);
-        }
-
-        ul li:first-child{
-            --color: rgb(255, 88, 88); /*Overriding the global variable in local scope*/
-            background-color: var(--color);
-        }
-
-        ul li:nth-child(2){
-            background-color: var(--tercolor,blue); /*If the variable is not defined then it will take the default value*/
-            opacity: var(--defopacity);
-        }
-
-        .container{
-            background-color: var(--seccolor);
+        .box{
+            width: 344px;
+            height: 344px;
+            background-color: steelblue;
+            margin: 3px;
+            padding: 3px;
         }
     </style>
 </head>
 <body>
-    <div class="nav">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
+    <div>
+        I am a RED body guy
     </div>
-    <div class="container">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, et porro! Ipsum, officiis vitae exercitationem esse perspiciatis, earum corporis ad architecto voluptatibus debitis error modi eum nemo accusantium? Debitis eveniet, recusandae sapiente minima assumenda ullam libero. Nostrum laboriosam cumque veniam facere non animi inventore ea!
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
     </div>
 </body>
 </html>
