@@ -3,52 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Media Queries</title>
+    <title>CSS Multicolor Website</title>
     <style>
+        :root{
+            --primary-color: white;
+            --primary-background: rgb(255, 123, 145);
+            --secondary-color: black;
+            --secondary-background: lightblue;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li{
+            list-style-type: none;
+            color: var(--primary-color);
+            background-color: var(--primary-background);
+            display: inline-block;
+            padding: 10px;
+            font-weight: bolder;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: var(--primary-color);
+        }
         body{
-            background-color: red;
-        }
-
-        /* @media not|only mediatype and (expressions) {
-            CSS-Code;
-        } */
-
-        @media only screen and (max-width: 455px) {
-            body{
-                background-color: blue;
-            }
-            .boxes{
-                flex-direction: column;
-            }
-        }
-
-        @media only screen and (orientation: landscape) {
-            body{
-                border: 5px solid green;
-            }
-        }
-
-        .boxes{
-            display: flex;
-        }
-
-        .box{
-            width: 344px;
-            height: 344px;
-            background-color: steelblue;
-            margin: 3px;
-            padding: 3px;
+            background-color: var(--primary-background);
         }
     </style>
 </head>
 <body>
-    <div>
-        I am a RED body guy
-    </div>
-    <div class="boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Contact us</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
