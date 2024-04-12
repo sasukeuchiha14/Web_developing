@@ -3,61 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More on CSS Selectors</title>
-    <style>
-        .box:first-child {
-            background-color: red;
-        }
-
-        .box::first-line{
-            color: blue;
-        }
-
-        .boxes *{
-            background-color: yellow;
-            border: 2px solid black;
-        }
-
-        /*Attribute*/
-        p, a, .box, [data-color="primary"]{ /*Selects all elements with data-color attribute*/
-            background-color: rgb(62, 255, 62);
-            margin-top: 10px;
-            padding-top: 20px;
-        }
-
-        .box:nth-child(odd){
-            background-color: aqua;
-        }
-
-        .box:nth-last-child(1){
-            background-color: red;
-        }
-
-        /*Pseudo Elements*/
-        .boxes::before{content: "Hi";color: yellow;}
-        .boxes::after{content: "Bye";color: yellow;}
-
-        ::selection{
-            background-color: black;
-            color: aqua;
-        }
-
-        .box::first-letter{
-            color: white;
-            font-size: 30px;
-        }
-
-        input::placeholder{
-            color: red;
-        }
-    </style>
+    <title>Layout Design</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="boxes">
-        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quo, pariatur iure quam laboriosam magni, rem sequi quis dicta quos corporis alias molestias iste aperiam accusamus nam itaque nisi blanditiis perspiciatis obcaecati earum error quibusdam distinctio? Ea, aliquam. Sint hic doloremque consectetur eveniet nobis, doloribus blanditiis, quasi error optio sunt dolore atque adipisci. Explicabo tempore in ab adipisci animi nisi cum odit neque. Adipisci fuga explicabo assumenda distinctio. Recusandae itaque, ut delectus architecto et iure temporibus cupiditate esse tempore. Optio, recusandae! Est deserunt, explicabo aperiam pariatur fugit dolorum. Eligendi assumenda suscipit vitae iure voluptas blanditiis impedit, sed officiis explicabo nobis illum reiciendis, ipsa at omnis aliquam, reprehenderit dolore nulla dolorum excepturi ad quaerat laborum? Beatae praesentium repellendus nobis consequatur eius. Sed non ipsa magnam at natus? Facere tenetur iure voluptates quae tempora voluptatibus incidunt voluptatem voluptas repudiandae. Autem voluptate veniam aspernatur eligendi ex similique consequatur ut aut explicabo quo, perferendis a quis nesciunt dicta. Obcaecati iste optio voluptatum quo assumenda minus odit, ipsum incidunt quod repellat? Praesentium id dicta omnis perferendis nisi ea sint fugit molestiae itaque, numquam fuga voluptatibus, beatae aperiam! Voluptatum, ducimus omnis eos maiores ipsum sapiente soluta fugit, placeat, reiciendis inventore eveniet nemo. Dolorem architecto sint accusamus, iure labore incidunt inventore quisquam culpa saepe praesentium dolor eos similique consectetur assumenda neque veniam rerum sequi aliquid mollitia enim harum cumque qui pariatur. Quod nesciunt quam velit dicta ullam porro quo similique animi ut, ea nostrum temporibus rerum deserunt fugiat doloremque unde tempore amet nam labore. Neque dolore explicabo iste laboriosam non voluptatibus hic delectus quas beatae porro? Alias, corporis voluptatum saepe consequatur excepturi id recusandae necessitatibus quasi. Itaque eveniet impedit provident ipsam debitis delectus aspernatur eligendi alias odio. Nobis dicta reiciendis totam molestias, provident consectetur mollitia? Nihil, dolore optio praesentium accusantium assumenda autem ad asperiores cum odio perferendis atque et expedita! Officia dolore aliquam ipsa perferendis repellat quasi magni impedit asperiores voluptatem rerum nulla omnis possimus odit unde, eligendi error reiciendis iure qui, debitis recusandae obcaecati voluptatum enim! Placeat quam cupiditate excepturi optio facere odit odio reiciendis recusandae. Repellendus delectus neque mollitia unde.</div>
-        <div data-color="primary" class="box">Hey, I am a box</div>
-        <div class="box">Hey, I am a box</div>
-        <input type="text" placeholder="Type your Name here">
+<body style="background-color: green;">
+    <nav>
+        <div class="nav-box">HOME</div>
+        <div class="nav-box">MYSELF</div>
+        <div class="nav-box">NOTHING</div>
+        <div class="nav-box">ABOUT</div>
+    </nav>
+    <div class="main">
+        <div class="content"></div>
+        <div class="content"></div>
+    </div>
+    <div class="head">Welcome to Hardik HUB</div>
+    <footer>
+        <p>&copy; 2024 Hardik</p>
+    </footer>
+    <div>
+        <img src="img.png" alt="" width="100" height="100">
     </div>
 </body>
 </html>
