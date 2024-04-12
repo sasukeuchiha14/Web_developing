@@ -3,43 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Multicolor Website</title>
+    <title>CSS Float & Clear</title>
     <style>
-        :root{
-            --primary-color: white;
-            --primary-background: rgb(255, 123, 145);
-            --secondary-color: black;
-            --secondary-background: lightblue;
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
         }
-        *{
-            margin: 0;
-            padding: 0;
+        img{
+            float: left;
+            margin-right: 20px;
         }
-        nav ul li{
-            list-style-type: none;
-            color: var(--primary-color);
-            background-color: var(--primary-background);
-            display: inline-block;
-            padding: 10px;
-            font-weight: bolder;
+        .card{
+            border: 2px solid red;
         }
-        nav ul li a{
-            text-decoration: none;
-            color: var(--primary-color);
-        }
-        body{
-            background-color: var(--primary-background);
+        .card:nth-child(3){
+            background-color: aqua;
+            clear: both;
         }
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Services</a></li>
-            <li><a href="/">Contact us</a></li>
-        </ul>
-    </nav>
+    <div class="cards">
+        <img src="https://www.dexerto.com/cdn-image/wp-content/uploads/2024/02/26/Dune2.jpg?width=3840&quality=60&format=auto" width="230px" alt="">
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum sunt laudantium sit. Quod debitis doloribus nostrum illo? Facere suscipit minus, odit omnis nesciunt atque a sunt fugiat molestias explicabo voluptatibus.</p>
+        </div>
+        <div class="card">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem temporibus iste ratione excepturi perferendis nisi. Itaque sequi cupiditate similique commodi eveniet ipsam labore, illo enim veritatis voluptates maxime dolorem eum ea eos et consequuntur, quos est libero eaque quibusdam blanditiis? Natus recusandae et ut, necessitatibus ipsam atque, nihil nostrum repellat cumque odit doloremque commodi assumenda alias eveniet earum sit asperiores quaerat voluptatem quasi! Illum obcaecati voluptate, voluptatem explicabo numquam optio impedit ad mollitia laudantium at iste ab dicta temporibus error ullam, earum praesentium eos dolorem distinctio dolore nisi provident, eligendi quod. Aspernatur voluptatum facilis laboriosam alias unde omnis illo sapiente veritatis voluptatibus accusantium nihil excepturi quia totam iste, ab corrupti, vitae maxime? Dolor accusantium quae at cum, dolorem, rem possimus sint labore similique nihil, neque unde consequatur. Nemo doloremque obcaecati impedit maxime ipsum ullam quasi molestiae nisi? Autem, voluptatibus deserunt molestiae quis fuga numquam nemo repellat sed omnis eaque a exercitationem distinctio consectetur animi. Consectetur omnis amet assumenda nobis, perspiciatis sequi ab voluptas? Amet, asperiores veniam? Error quas sunt sed, et numquam dicta tempore ut, inventore, porro mollitia fuga atque aut non itaque vero voluptates commodi consequatur accusamus eius sapiente? Blanditiis perferendis reiciendis natus corporis minus sequi asperiores sint neque voluptate! Itaque, obcaecati? Quasi, corporis ullam maiores, fugiat, nulla delectus illo magnam dicta consectetur aspernatur praesentium incidunt placeat error alias porro. Alias nobis ratione voluptate facilis commodi itaque excepturi veniam quidem, ullam temporibus architecto!</p>
+        </div>
+        <div class="card">Card 3</div>
+    </div>
 </body>
 </html>
