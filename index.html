@@ -3,26 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Design</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CSS Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            border: 2px solid red;
+            display: flex;
+            height: 80vh;
+            justify-content: center; /* center | flex-start | flex-end | space-around | space-between */
+            /* justify content is for main axis */
+            align-items: center;
+            flex-direction: row-reverse; /* row | row-reverse | column | column-reverse */
+            flex-wrap: wrap; /* wrap | nowrap | wrap-reverse */
+            align-content: center; /* center | flex-start | flex-end | space-around | space-between */
+            /* there is no justify-items in flexbox */
+            gap: 10px 5px; /* gap: row-gap column-gap */
+        }
+        .item{
+            height: 32px;
+            width: 32px;
+            border: 2px solid #000;
+            /* margin: 4px; */
+            background-color: blueviolet;
+        }
+
+        .order-1{
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+        /* Default order is 0. item will come according to order number. more will come at last. */
+
+        /* flex-grow is 0 as default. 1 means the elements will take whole width. 2 or more means, it will take that much times relative to other elements. */
+        /* flex-shrink is 1 as default. 0 means it will not shrink. 2 or more means, it will shrink that much times relative to other elements. */
+
+        .item7{
+            align-self: flex-end; /* flex-start | flex-end | center | baseline | stretch */
+            /* To align the item itself according to cross axis */
+        }
+    </style>
 </head>
-<body style="background-color: green;">
-    <nav>
-        <div class="nav-box">HOME</div>
-        <div class="nav-box">MYSELF</div>
-        <div class="nav-box">NOTHING</div>
-        <div class="nav-box">ABOUT</div>
-    </nav>
-    <div class="main">
-        <div class="content"></div>
-        <div class="content"></div>
-    </div>
-    <div class="head">Welcome to Hardik HUB</div>
-    <footer>
-        <p>&copy; 2024 Hardik</p>
-    </footer>
-    <div>
-        <img src="img.png" alt="" width="100" height="100">
-    </div>
+<body>
+    <main>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item order-1">3</div>
+            <div class="item">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item item7"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </main>
 </body>
 </html>
