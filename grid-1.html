@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 320px;
+            border: 2px solid black;
+            display: grid;
+
+            grid-template-columns: 1fr 2fr; /* 2 columns in which 1st is taking 1 fraction of the available space and 2nd is taking 2 fractions of the available space */
+            grid-template-rows: [r1] 100px [r2] 100px [r3] 100px [r4]; /* 3 rows of 100px each */
+            /* Using repeat [ function grid-template-rows: repeat(3, 100px) ] */
+
+            gap: 10px 10px; /* Gap between the grid items - row gap and column gap */
+
+            align-items: center; /* Aligning the items vertically */
+                    /* start | end | center | stretch | baseline  where stretch is default */
+            justify-items: center; /* Aligning the items horizontally */
+
+            /* When we have grid bigger than grid content, we can use justify-content and align-content to move whole gris contents in grid*/
+
+            /* We have place-items property which is a shorthand for align-items and justify-items */
+            /* We have place-content property which is a shorthand for align-content and justify-content */
+            /* It changes both the horizontal and vertical alignment of the grid items */
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item-1{
+            grid-row: 1/2; /* From 1 grid line to 2 grid line */
+            /*We can also use [grid-row-start & grid-row-end] */
+            grid-column: 1/2;
+        }
+
+        .item-2{
+            align-self: start; /* Aligning the item vertically */
+            justify-self: end; /* Aligning the item horizontally */
+        }
+
+        .item-4{
+            grid-row: r1/r2; /* Using names */
+            grid-column: 1/2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>
