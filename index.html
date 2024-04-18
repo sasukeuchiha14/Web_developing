@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Edit nav bar using Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav {
+            display: flex;
+            height: 10vh;
+            width:  minmax(100vh,1500px);
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            gap: 10px 15px;
+            margin-top: 18px;
+        }
+        .nav *{
+            font-weight: 400;
+            font-size: 22px;
+            text-decoration: none;
+            color: black;
+        }
+        .item{
+            padding: 10px;
+        }
+        .item:hover{
+            cursor: pointer;
+            font-size: 24px;
+            color: rgb(63, 63, 63);
+        }
+        .item-1{
+            margin-left: 20vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="https://www.ultraedit.com/">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" width="259" height="83" alt="UltraEdit" id="logo">
+        </a>
+        <div class="item item-1">Product ▾</div>
+        <div class="item item-2">Pricing ▾</div>
+        <div class="item item-3">Resources ▾</div>
+        <div class="item item-4">About us ▾</div>
+        <div class="item item-5">Security and Compliance</div>
+        <a title="English" href="https://www.ultraedit.com/downloads/ultraedit-download-thank-you/">
+            <img src="https://icon-library.com/images/answer-icon/answer-icon-2.jpg" width="40px">
+        </a>
+    </div>
+</body>
+</html>
