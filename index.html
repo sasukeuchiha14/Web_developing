@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transition Property</title>
+    <style>
+        .container{
+            background-color: rgb(79, 255, 77);
+            width: 50vw;
+            height: 40vh;
+        }
+        .box{
+            background-color: rgb(255, 0, 0);
+            width: 5vw;
+            height: 4vh;
+            transition-property: all; /* we can also define for single or selected property */
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0.74, 0.69, 0, 0.38); /* ease, ease-in, ease-out, linear, cubic-bezier() */
+            transition-delay: 1s;
+
+            transition: all 3s cubic-bezier(0.74, 0.69, 0, 0.38) 1s; /* shorthand property */
+        }
+        .translate{
+            transform: translateX(40vw) translateY(30vh) scale(2);
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html>
