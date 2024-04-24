@@ -3,33 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Transition Property</title>
+    <title>CSS Animations</title>
     <style>
-        .container{
-            background-color: rgb(79, 255, 77);
-            width: 50vw;
-            height: 40vh;
+        .container {
+            background-color: azure;
+            height: 80vh;
+            width: 30vw;
         }
-        .box{
-            background-color: rgb(255, 0, 0);
-            width: 5vw;
-            height: 4vh;
-            transition-property: all; /* we can also define for single or selected property */
-            transition-duration: 3s;
-            transition-timing-function: cubic-bezier(0.74, 0.69, 0, 0.38); /* ease, ease-in, ease-out, linear, cubic-bezier() */
-            transition-delay: 1s;
 
-            transition: all 3s cubic-bezier(0.74, 0.69, 0, 0.38) 1s; /* shorthand property */
+        .box{
+            width: 34px;
+            height: 45px;
+            background-color: aqua;
+
+            animation: hardikfirstanimation;
+
+            animation-duration: 3s; /* Will complete the animation in 3 seconds */
+            animation-iteration-count: 3; /* Will repeat the animation 3 times */
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation-delay: 2s; /* Will start the animation after 2 seconds */
+            animation-direction: alternate-reverse; /* Will reverse the animation */
+            animation-play-state: paused; /* Will pause the animation when active*/
+            animation-fill-mode: forwards; /* Will retain the last frame of the animation */
+
+            /* We can also use the shorthand property */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* We can skip the functions that we don't want to use */
+
+            animation: hardikfirstanimation 3s 3 cubic-bezier(0.165, 0.84, 0.44, 1) 2s alternate-reverse forwards running,hard2 3s 3 ease 12s alternate-reverse backwards running;
         }
-        .translate{
-            transform: translateX(40vw) translateY(30vh) scale(2);
-            background-color: violet;
+
+        @keyframes hardikfirstanimation {
+            from{
+            }
+            to{
+                transform: translateX(1000px);
+            }
+        }
+
+        @keyframes hard2 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            40%{
+                transform: rotate(220deg);
+            }
+            60%{
+                transform: rotate(250deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="box translate"></div>
+        <div class="box">
+            Box
+        </div>
     </div>
 </body>
 </html>
