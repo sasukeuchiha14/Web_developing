@@ -3,71 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Animations</title>
+    <title>Bounce Animation</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            
+        }
         .container {
-            background-color: azure;
-            height: 80vh;
-            width: 30vw;
+            width: 100vw;
+            height: 100vh;
+            background-color: blue;
         }
-
-        .box{
-            width: 34px;
-            height: 45px;
-            background-color: aqua;
-
-            animation: hardikfirstanimation;
-
-            animation-duration: 3s; /* Will complete the animation in 3 seconds */
-            animation-iteration-count: 3; /* Will repeat the animation 3 times */
-            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-            animation-delay: 2s; /* Will start the animation after 2 seconds */
-            animation-direction: alternate-reverse; /* Will reverse the animation */
-            animation-play-state: paused; /* Will pause the animation when active*/
-            animation-fill-mode: forwards; /* Will retain the last frame of the animation */
-
-            /* We can also use the shorthand property */
-            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-            /* We can skip the functions that we don't want to use */
-
-            animation: hardikfirstanimation 3s 3 cubic-bezier(0.165, 0.84, 0.44, 1) 2s alternate-reverse forwards running,hard2 3s 3 ease 12s alternate-reverse backwards running;
+        .ball{
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            animation:
+                Xdirn 3s 1 cubic-bezier(0,0,0,0) normal 2s forwards,
+                Ydirn 0.5s 6 cubic-bezier(0.5, 0, 0.5, 0) alternate-reverse 2s forwards;
         }
-
-        @keyframes hardikfirstanimation {
+        @keyframes Xdirn {
             from{
+                transform: translateX(0);
             }
             to{
-                transform: translateX(1000px);
+                transform: translateX(90vw);
             }
         }
-
-        @keyframes hard2 {
+        @keyframes Ydirn {
             0%{
-                transform: rotate(100deg);
-            }
-            20%{
-                transform: rotate(200deg);
-            }
-            40%{
-                transform: rotate(220deg);
-            }
-            60%{
-                transform: rotate(250deg);
-            }
-            80%{
-                transform: rotate(300deg);
+                transform: translateY(0px);
             }
             100%{
-                transform: rotate(310deg);
+                transform: translateY(50vh);
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="box">
-            Box
-        </div>
+        <div class="ball"></div>
     </div>
 </body>
 </html>
