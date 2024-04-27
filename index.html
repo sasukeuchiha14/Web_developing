@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bounce Animation</title>
+    <title>Document</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            
+        .box {
+            height: 121px;
+            width: 121px;
+            background-color: red;
+            border-radius: 70px;
+            position: absolute;
+            bottom: 0;
+            left: 0;   
+            animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
         }
+
         .container {
-            width: 100vw;
-            height: 100vh;
+            position: relative;
+            height: 80vh;
+            width: 80vw;
             background-color: blue;
         }
-        .ball{
-            background-color: red;
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            animation:
-                Xdirn 3s 1 cubic-bezier(0,0,0,0) normal 2s forwards,
-                Ydirn 0.5s 6 cubic-bezier(0.5, 0, 0.5, 0) alternate-reverse 2s forwards;
-        }
-        @keyframes Xdirn {
+
+        @keyframes animateX {
             from{
-                transform: translateX(0);
+                left: 0;
             }
             to{
-                transform: translateX(90vw);
+                left: 100%;
             }
         }
-        @keyframes Ydirn {
-            0%{
-                transform: translateY(0px);
+
+        @keyframes animateY {
+           from{
+                bottom: 0;
             }
-            100%{
-                transform: translateY(50vh);
+            to{
+                bottom: 100% ;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="ball"></div>
+
+        <div class="box">
+        </div>
     </div>
 </body>
 </html>
