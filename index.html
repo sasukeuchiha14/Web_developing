@@ -3,50 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Object Fit and Position + CSS Background</title>
     <style>
-        .box {
-            height: 121px;
-            width: 121px;
-            background-color: red;
-            border-radius: 70px;
-            position: absolute;
-            bottom: 0;
-            left: 0;   
-            animation: animateX 3s linear infinite, animateY 1s ease-out infinite alternate;
+        .container{
+            height: 456px;
+            width: 456px;
+            border: 2px solid #000;
+            background-color: cyan;
         }
 
-        .container {
-            position: relative;
-            height: 80vh;
-            width: 80vw;
-            background-color: blue;
+        img{
+            width: 450px;
+            height: 450px;
+
+            object-fit: fill; /* Will show whole image in container by stretching the image to fit the container - Default*/
+            object-fit: scale-down; /* Will show whole image in container with it's original aspect ratio & will shrink the image if it's larger than container */
+
+            object-fit: contain; /* Will show whole image in container with it's original aspect ratio & will leave the left over part */
+
+            object-fit: cover; /* Will show whole image in container with it's original aspect ratio & will crop the left over part */
+            object-position: 50% 50%; /* Will show the image at center */
+            object-position: 10px 20px; /* Will show the image at 10px from top and 20px from left as margin gap*/
+            object-position: top left; /* Will show the image from top left corner */
         }
 
-        @keyframes animateX {
-            from{
-                left: 0;
-            }
-            to{
-                left: 100%;
-            }
-        }
+        .container2 {
+            height: 456px;
+            width: 456px;
+            border: 2px solid #000;
+            background-image: url("https://i.scdn.co/image/ab67616d00001e02aedd9728f5cc4b13ee49e061");
+            
+            background-repeat: repeat-x; /* Will repeat the image only in x-axis */
+            background-repeat: repeat-y; /* Will repeat the image only in y-axis */
+            background-repeat: no-repeat; /* Will not repeat the image */
 
-        @keyframes animateY {
-           from{
-                bottom: 0;
-            }
-            to{
-                bottom: 100% ;
-            }
+            background-position: center center; /* Will show the image at center */
+
+            background-clip: border-box; /* Will show the image in the border box */
         }
     </style>
 </head>
 <body>
     <div class="container">
-
-        <div class="box">
-        </div>
+        <img src="https://media.istockphoto.com/id/1023819892/photo/underwater-world-with-school-fish-swim-above-a-coral-reef-and-sun-light.jpg?s=1024x1024&w=is&k=20&c=SdPuhNyIfSVBvdAmOs_9iZ6PWX8m2faYcXVh9Yfzfl4=" alt="">
     </div>
+    <div class="container2"></div>
 </body>
 </html>
