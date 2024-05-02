@@ -3,50 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Object Fit and Position + CSS Background</title>
+    <title>CSS Filters</title>
     <style>
-        .container{
-            height: 456px;
-            width: 456px;
-            border: 2px solid #000;
-            background-color: cyan;
+        .bl{
+            filter: blur(3px);
+            opacity: 0.5;
+            filter: opacity(0.5);
         }
 
-        img{
-            width: 450px;
-            height: 450px;
-
-            object-fit: fill; /* Will show whole image in container by stretching the image to fit the container - Default*/
-            object-fit: scale-down; /* Will show whole image in container with it's original aspect ratio & will shrink the image if it's larger than container */
-
-            object-fit: contain; /* Will show whole image in container with it's original aspect ratio & will leave the left over part */
-
-            object-fit: cover; /* Will show whole image in container with it's original aspect ratio & will crop the left over part */
-            object-position: 50% 50%; /* Will show the image at center */
-            object-position: 10px 20px; /* Will show the image at 10px from top and 20px from left as margin gap*/
-            object-position: top left; /* Will show the image from top left corner */
+        #id1{
+            filter: invert(1);
         }
 
-        .container2 {
-            height: 456px;
-            width: 456px;
-            border: 2px solid #000;
-            background-image: url("https://i.scdn.co/image/ab67616d00001e02aedd9728f5cc4b13ee49e061");
-            
-            background-repeat: repeat-x; /* Will repeat the image only in x-axis */
-            background-repeat: repeat-y; /* Will repeat the image only in y-axis */
-            background-repeat: no-repeat; /* Will not repeat the image */
+        #id2{
+            filter: brightness(50%) contrast(1.1) grayscale(50%);
+        }
 
-            background-position: center center; /* Will show the image at center */
-
-            background-clip: border-box; /* Will show the image in the border box */
+        #id3{
+            filter: sepia(100%);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://media.istockphoto.com/id/1023819892/photo/underwater-world-with-school-fish-swim-above-a-coral-reef-and-sun-light.jpg?s=1024x1024&w=is&k=20&c=SdPuhNyIfSVBvdAmOs_9iZ6PWX8m2faYcXVh9Yfzfl4=" alt="">
+        <img class="bl" id="id1" src="https://images.freeimages.com/images/large-previews/c31/colors-1383652.jpg?fmt=webp&w=500" alt="">
+        <img id="id2" src="https://asset.inc42.com/2022/03/Feature-SRK.png" alt="">
+        <img id="id3" src="https://images.deccanherald.com/deccanherald%2F2024-03%2Fb90c47e5-cec9-4f7b-b7c4-14ac433ef089%2FMS_Dhoni_s_new_look_ahead_of_IPL__11_.jpg?rect=0%2C0%2C540%2C720" alt="">
     </div>
-    <div class="container2"></div>
 </body>
 </html>
