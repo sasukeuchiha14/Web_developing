@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Filters</title>
-    <style>
-        .bl{
-            filter: blur(3px);
-            opacity: 0.5;
-            filter: opacity(0.5);
-        }
-
-        #id1{
-            filter: invert(1);
-        }
-
-        #id2{
-            filter: brightness(50%) contrast(1.1) grayscale(50%);
-        }
-
-        #id3{
-            filter: sepia(100%);
-        }
-    </style>
+    <title>JAVA-Script Introduction</title>
 </head>
 <body>
-    <div class="container">
-        <img class="bl" id="id1" src="https://images.freeimages.com/images/large-previews/c31/colors-1383652.jpg?fmt=webp&w=500" alt="">
-        <img id="id2" src="https://asset.inc42.com/2022/03/Feature-SRK.png" alt="">
-        <img id="id3" src="https://images.deccanherald.com/deccanherald%2F2024-03%2Fb90c47e5-cec9-4f7b-b7c4-14ac433ef089%2FMS_Dhoni_s_new_look_ahead_of_IPL__11_.jpg?rect=0%2C0%2C540%2C720" alt="">
+    <div class="box">
+        First time JavaScipt
     </div>
+    <script>
+        alert("Welcome to JavaScript");
+
+        console.log("Hey I am Console Log");
+        console.log("Code is Running...");
+        console.error("This is an error");
+
+        var a = prompt("Enter your name");
+        console.log(a);
+
+        var b = confirm("Are you sure, you want to blast your PC?");
+        if (b == true) {
+            console.log("Your PC is going to blast in 3 seconds");
+            time = 3;
+            setTimeout(() => {
+                console.log("Your PC is blasted");
+            }, time * 1000);
+        }
+        else {
+            console.log("You are safe");
+        }
+
+        document.title = "JavaScript Introduction";
+        document.body.style.backgroundColor = "lightblue";
+    </script>
 </body>
 </html>
