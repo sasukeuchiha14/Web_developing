@@ -1,29 +1,16 @@
-console.log("This is String tutorial")
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let a = "Hardik";
-console.log(a[3])
+console.log(arr, typeof arr);    // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 'object'
+console.log(arr.length);         // 10
 
-console.log(a.length)
+// Array is mutable unlike strings.
+// => We can change the values of an array.
 
-let real_name = "Hardik";
-let friend = "Akshat";
-console.log("His name is " + real_name + " and his friend name is " + friend)
-console.log(`His name is ${real_name} and his friend name is ${friend}`) // We have to use ` (backquotes) ` for this
+arr[0] = 100;
+arr[1] = "Hello";
+arr[2] = true;
+arr[3] = { name: "John" };
+arr[4] = [1, 2, 3, 4];
 
-let b = "Shivam"
-console.log(b.toUpperCase())
-console.log(b.toLowerCase())
-
-console.log(b.indexOf('v'))
-console.log(b.slice(1, 4))
-console.log(b.slice(1))
-
-console.log(b.replace('Shi', 'Hii')) // If 2 occurrences are there then it will replace the first one ONLY
-console.log(a.concat(b, " is a good person", "!!!"))
-
-// All these will not change the original string
-// It will return the new string with the changes made in it
-
-console.log(a.startsWith('Hard'))
-console.log(a.endsWith('dik'))
-console.log(friend.endsWith('mat'))
+console.log(arr);
+console.log(arr[4][2]);          // 3
