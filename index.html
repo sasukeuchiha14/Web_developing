@@ -3,37 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Factorial</title>
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            gap: 10px;
+        }
+        .box {
+            background-color: #3498db;
+            color: white;
+            font-size: 1.5rem;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        let num = prompt("Enter a number:");
-        
-        let factorial_num = 1;
-        for (let i = 1; i <= num; i++) {
-            factorial_num *= i;
-        }
-        console.log(`The factorial of ${num} is ${factorial_num}`);
-        
-        factorial_num = 1;
-        for (let i=num; i>=1; i--) {
-            factorial_num *= i;
-        }
-        console.log(`The factorial of ${num} is ${factorial_num}`);
-        
-        
-        const calculateFactorial = (num) => {
-            if (num === 0) {
-                return 1;
-            }
-            return num * calculateFactorial(num - 1);
-        }
-        console.log(`The factorial of ${num} is ${calculateFactorial(num)}`);
+    <div class="container">
+        <!-- Comment Node -->
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+    </div>
 
-        
-        const factorial = Array.from({ length: num }, (_, i) => i + 1);
-        const mult = (a, b) => a * b;
-        console.log(`The factorial of ${num} is ${factorial.reduce(mult)}`);
+    <script>
+        console.log(document.body.firstElementChild.childNodes) // NodeList(13) [text, comment, text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text]
+
+        console.log(document.body.childNodes[1].firstChild)
+        console.log(document.body.childNodes[1].firstElementChild)
+
+        document.body.childNodes[1].lastElementChild.style.backgroundColor = 'red'
+        document.body.childNodes[1].lastElementChild.style.color = 'black'
+
+        document.body.childNodes[1].lastElementChild.previousElementSibling.style.backgroundColor = 'green'
+        document.body.childNodes[1].lastElementChild.previousElementSibling.previousElementSibling.style.backgroundColor = 'yellow'
+        document.body.childNodes[1].lastElementChild.previousElementSibling.nextElementSibling.style.backgroundColor = 'purple'
+        // Previous Sibling and Next Sibling are not working with text nodes and comment nodes
+
     </script>
 </body>
 </html>
