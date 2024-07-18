@@ -4,49 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserting and Removing Elements using JavaScript</title>
-    <style>
-        .box{
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="box test_name" data-createdby="hardik" data-conceptby="harry" style="display: flex;">Hi</div>
-        <div class="box">Hardik</div>
+    <div class="playlist">
+        <h2>Playlist</h2>
+        <hr>
+        <div id="cards">
+            <!-- <div class="card">
+                <div class="number">1</div>
+                <div class="img">
+                    <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ">
+                    <div class="time">12:34</div>
+                </div>
+                <div class="about">
+                    <p class="title">Installing VS Code & How Websites Work | Sigma Web Development Course - Tutorial #1</p>
+                    <p class="about">CodeWithHarry • 2.1M views • 9 months ago</p>
+                    <p>&nbsp;</p>
+                </div>
+            </div> -->
+        </div>
+        <button onclick="addVideo()">Add Video</button>
+        <button onclick="removeVideo()">Remove Video</button>
     </div>
-
-    <script>
-        console.log(document.querySelector('.container').outerHTML);
-        console.log(document.querySelector('.container').innerHTML);
-        console.log(document.querySelector('.container').innerText);
-
-        console.log(document.querySelector('.box').attributes);
-        console.log(document.querySelector('.box').hasAttribute('style'));
-        console.log(document.querySelector('.box').getAttribute('style'));
-        console.log(document.querySelector('.box').setAttribute('style', 'color: red;'));
-        console.log(document.querySelector('.box').removeAttribute('style'));
-
-        document.designMode = 'on'; // It will make the whole page editable
-        document.querySelector('.box').dataset.createdby = 'hardik';
-        console.log(document.querySelector('.box').dataset);
-
-        document.querySelector('.box').insertAdjacentHTML('beforebegin', '<b>Before Begin</b>');
-        document.querySelector('.box').insertAdjacentHTML('afterbegin', '<b>After Begin</b>');
-        document.querySelector('.box').insertAdjacentHTML('beforeend', '<b>Before End</b>');
-        document.querySelector('.box').insertAdjacentHTML('afterend', '<b>After End</b>');
-
-        console.log(document.querySelector('.box').classList)
-        console.log(document.querySelector('.box').className)
-        console.log(document.querySelector('.box').classList.add('new-class'))
-        console.log(document.querySelector('.box').classList.add('empty'))
-        console.log(document.querySelector('.box').classList)
-        console.log(document.querySelector('.box').className)
-        
-        console.log(document.querySelector('.box').classList.toggle('empty')) // It will reverse the class by adding and removing it if it is present or not
-
-    </script>
 </body>
 </html>
+
+<!-- <div class="card">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9bZkp7q19f0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div> -->

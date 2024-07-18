@@ -1,0 +1,59 @@
+*{
+    margin: 10px;
+    padding: 0;
+    font-weight: 600;
+}
+
+.playlist{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgba(151, 195, 198, 0.559);
+    width: 100%;
+}
+
+.cards{
+    
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.img{
+    /* display: inline; */
+}
+
+img{
+    border-radius: 10px;
+    width: 200px;
+    height: 110px;
+}
+
+.img > .time{
+    background-color: rgba(0, 0, 0, 0.205);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 155px;
+}
+
+.about *{
+    margin-left: -10px;
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(0, 0, 0, 0.5);
+}
