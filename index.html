@@ -3,76 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events, Event Bubbling, setInterval & setTimeout</title>
-    <style>
-        .container {
-            width: 100%;
-            height: 100vh;
-            background-color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .box {
-            width: 200px;
-            height: 200px;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
-    </style>
+    <title>Callbacks & Promises</title>
+    <script src="promice.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="box">
-            Hi, I am a Box
-        </div>
-    </div>
-    <button id="btn">Change Background Color</button>
+    <!-- <script>
+        const Callback = (message) => {
+            console.log(message);
+        }
 
-    <script>
-        var button = document.getElementById('btn');
+        const loadScript = (src, callback) => {
+            let script = document.createElement('script');
+            script.src = src;
+            script.onload = () => callback('Hello World');
+            document.head.append(script);
+        }
 
-        button.addEventListener('click', function() {
-            let container = document.querySelector('.container');
-            container.style.backgroundColor = 'red';
-        });
-        button.addEventListener('dblclick', function() {
-            let container = document.querySelector('.container');
-            container.style.backgroundColor = 'green';
-        });
-        button.addEventListener('contextmenu', function() {
-            let container = document.querySelector('.container');
-            container.style.backgroundColor = 'yellow';
-        });
-
-        // Event Bubbling
-        var box = document.querySelector('.box');
-        box.addEventListener('click', function(e) {
-            e.stopPropagation(); // Stop Event Bubbling
-            console.log('Box Clicked');
-        });
-        var container = document.querySelector('.container');
-        container.addEventListener('click', function() {
-            console.log('Container Clicked');
-        });
-
-        document.addEventListener('keydown', function(e) {
-            console.log(e.key);
-        });
-
-        setTimeout(function() {
-            console.log('Ran after 3 seconds');
-        }, 3000);
-
-        setInterval(function() {
-            console.log('Hello ' + Math.ceil(Math.random()*100));
-        }, 1000);
-
-        // Use clearInterval() to stop setInterval
-        // Use clearTimeout(1) to stop setTimeout
-    </script>
+        loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', Callback);
+    </script> -->
 </body>
 </html>
