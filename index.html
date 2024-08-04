@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Callbacks & Promises</title>
-    <script src="promice.js"></script>
+    <title>Async/Await & Fetch API</title>
 </head>
 <body>
-    <!-- <script>
-        const Callback = (message) => {
-            console.log(message);
+    <script>
+        function getData() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Data has been fetched');
+                }, 2000);
+            });
         }
 
-        const loadScript = (src, callback) => {
-            let script = document.createElement('script');
-            script.src = src;
-            script.onload = () => callback('Hello World');
-            document.head.append(script);
+        // Old Approach to wait for the data
+
+        // let data1 = getData();
+        //data1.then((v) => {
+        //    console.log(data1);
+        //    console.log('process data');
+        //})
+
+        // Async/Await Approach to wait for the data
+
+        async function processData() {
+            // Simulate getting data from an API/Server
+            let x = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+            let data = await x.json()
+            console.log(x);
+            await 455
         }
 
-        loadScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js', Callback);
-    </script> -->
+        async function fetchData() {
+            console.log('Start');
+            let data = await processData();
+            console.log(data);
+            console.log('End');
+        }
+
+        fetchData();
+    </script>
 </body>
 </html>
