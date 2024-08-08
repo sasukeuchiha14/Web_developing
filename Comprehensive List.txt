@@ -1,60 +1,79 @@
-Block Elements (Most Commonly Used First)
-
-<div>: A generic container for flow content.
-<p>: Paragraph.
-<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Headings.
-<ul>: Unordered list.
-<ol>: Ordered list.
-<li>: List item.
-<form>: A section containing form controls.
-<table>: Table.
-<section>: A standalone section of a document.
-<header>: A container for introductory content or a set of navigational links.
-<footer>: Footer of a section or page.
-<nav>: A section of a page that contains navigation links.
-<article>: A self-contained composition in a document.
-<aside>: A section of a page that contains information indirectly related to the main content.
-<main>: The main content of a document.
-<fieldset>: A set of form controls grouped under a common name.
+<abbr>      : Abbreviation.
+<address>   : Contact information for the author or owner of the document.
+<article>   : A self-contained composition in a document.
+<aside>     : A section of a page that contains information indirectly related to the main content.
 <blockquote>: A block of text that is a quotation from another source.
-<pre>: Preformatted text.
-<canvas>: A container used to draw graphics via JavaScript.
-<dl>: Description list.
-<dt>: Term in a description list.
-<dd>: Description in a description list.
-<figure>: Any content that is referenced from the main content.
+<br>        : Line break.
+<canvas>    : A container used to draw graphics via JavaScript.
+<cite>      : Citation.
+<code>      : Code snippet.
+<datalist>  : A list of predefined options for an `<input>` element.
+<dd>        : Description in a description list.
+<del>       : Deleted text.
+<details>   : Additional details that the user can view or hide.
+<dfn>       : Definition term.
+<dialog>    : A dialog box or window that is displayed on top of the current page.
+<dl>        : Description list.
+<dt>        : Term in a description list.
+<em>        : Emphasized text.
+<fieldset>  : A set of form controls grouped under a common name.
+<figure>    : Any content that is referenced from the main content.
 <figcaption>: A caption for a <figure> element.
-<address>: Contact information for the author or owner of the document.
-<hr>: A thematic break or a horizontal rule.
-<tfoot>: Footer of a table.
-
-
-Inline Elements (Most Commonly Used First)
-<a>: Anchor or hyperlink.
-<img>: Image.
-<span>: Generic inline container.
-<input>: Input field.
-<label>: Label for a form element.
-<strong>: Strong emphasis.
-<em>: Emphasized text.
-<br>: Line break.
-<code>: Code snippet.
-<b>: Bold text.
-<i>: Italic text.
-<u>: Underlined text.
-<small>: Smaller text.
-<sub>: Subscript.
-<sup>: Superscript.
-<mark>: Marked or highlighted text.
-<q>: Short inline quotation.
-<cite>: Citation.
-<kbd>: Keyboard input.
-<samp>: Sample output.
-<var>: Variable in a mathematical expression or programming context.
-<time>: Time.
-<abbr>: Abbreviation.
-<data>: Machine-readable translation of content.
-<acronym>: Acronym (Not supported in HTML5).
+<footer>    : Footer of a section or page.
+<form>      : A section containing form controls.
+<h1>, <h2>, <h3>, <h4>, <h5>, <h6>: Headings.
+<header>    : A container for introductory content or a set of navigational links.
+<hr>        : A thematic break or a horizontal rule.
+<iframe>    : Inline frame.
+<img>       : Image.
+<input>     : Input field.
+<ins>       : Inserted text.
+<kbd>       : Keyboard input.
+<label>     : Label for a form element.
+<legend>    : Caption for a fieldset element.
+<main>      : The main content of a document.
+<mark>      : Marked or highlighted text.
+<marquee>   : Moves text horizontally or vertically across the screen. (Note: The <marquee> element is deprecated and should not be used.)
+<menu>      : Menu list.
+<meter>     : Represents a scalar measurement within a known range with different colors.
+<nav>       : A section of a page that contains navigation links.
+<noscript>  : Fallback content for script elements.
+<object>    : Embedded object.
+<ol>        : Ordered list.
+<optgroup>  : Group of options in a select element.
+<option>    : Option in a select element.
+<output>    : Result of a calculation or user action.
+<p>         : Paragraph.
+<pre>       : Preformatted text.
+<progress>  : Progress bar of a task.
+<q>         : Short inline quotation.
+<rp>        : Parenthesis for ruby annotation text.
+<rt>        : Ruby annotation text.
+<ruby>      : Ruby annotation.
+<s>         : Strikethrough text.
+<samp>      : Sample output.
+<section>   : A standalone section of a document.
+<select>    : Dropdown list.
+<small>     : Smaller text.
+<span>      : Generic inline container.
+<strong>    : Strong emphasis.
+<sub>       : Subscript.
+<summary>   : Summary of details that can be toggled.
+<sup>       : Superscript.
+<table>     : Table.
+<tbody>     : Table body.
+<td>        : Table cell.
+<textarea>  : Multi-line text input control.
+<tfoot>     : Footer of a table.
+<th>        : Table header cell.
+<thead>     : Table header.
+<time>      : Time.
+<title>     : Document title.
+<tr>        : Table row.
+<u>         : Underlined text.
+<ul>        : Unordered list.
+<var>       : Variable in a mathematical expression or programming context.
+<wbr>       : Line break opportunity.
 
 
 
